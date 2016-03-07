@@ -7,7 +7,7 @@ Simple js 'app-like' notifications.
 1. add ```NotificationStation.js``` to your project
 
 ### Initialization
-The concept is quite simple. You first need to configure your ```Station```, which will display your ```AppNotification.notification```. Currently, all settings listed below are REQUIRED. 
+The concept is quite simple. You first need to configure your ```Station```, which will display your ```AppNotification```. Currently, all settings listed below are REQUIRED. 
 
 ```javascript
 grandCentralSettings = {
