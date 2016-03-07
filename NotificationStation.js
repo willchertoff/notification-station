@@ -45,15 +45,15 @@ Notification Station
     showAppNotification: function(notification) {
       _this = this;
       document.getElementById(this.container).style.visibility = 'visible';
-      document.getElementById(this.container).classList.add(notification.showAnimation);
-      document.getElementById(this.el).innerHTML = notification.message;
+      document.getElementById(this.container).classList.add(notification.showAnimation,notification.notificationClass);
+      document.getElementById(this.el).innerHTML = notification.notification;
       setTimeout(function() {_this.clearAppNotification(notification)},this.duration);
     },
     clearAppNotification: function(notification) {
       _this = this;
-      document.getElementById(this.container).classList.remove(notification.showAnimation);
       document.getElementById(this.container).classList.add(notification.hideAnimation);
       setTimeout(function() {
+        document.getElementById(_this.container).classList.remove(notification.showAnimation,notification.notificationClass);
         document.getElementById(_this.container).style.visibility = 'hidden';
         document.getElementById(_this.container).classList.remove(notification.hideAnimation);
         document.getElementById(_this.el).innerHTML = '';
@@ -61,12 +61,12 @@ Notification Station
     }
   }
 
-  function AppNote(options) {
+  function AppNotification(options) {
     options = helpers.setDefault(options, {});
     this.station = options.station || null;
     this.showAnimation = options.showAnimation || null;
     this.hideAnimation = options.hideAnimation || null;
-    this.noteClass = options.noteClass || null;
+    this.notificationClass = options.notificationClass || null;
     
     this.notify = function() {
       this.station.showAppNotification(this);
@@ -74,18 +74,18 @@ Notification Station
     return this;
   }
 
-  AppNote.prototype = {
-    get message() {
-      return message;
+  AppNotification.prototype = {
+    get notification() {
+      return notification;
     },
-    set message(new_message) {
-      message = new_message;
+    set notification(new_notification) {
+      notification = new_notification;
       this.notify();
     }
   }
 
   NotificationStation = {
-    AppNote: AppNote,
+    AppNotification: AppNotification,
     Station: Station
   }
 
