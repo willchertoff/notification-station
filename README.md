@@ -7,7 +7,7 @@ Simple js 'app-like' notifications.
 1. add ```NotificationStation.js``` to your project
 
 ### Initialization
-The concept is quite simple. You first need to configure your ```Station```, which will trigger your ```AppNotes```. Currently, all settings listed below are REQUIRED. 
+The concept is quite simple. You first need to configure your ```Station```, which will display your ```AppNotification.notification```. Currently, all settings listed below are REQUIRED. 
 
 ```javascript
 grandCentralSettings = {
@@ -24,7 +24,7 @@ var grandCentral = new NS.Station(settings);
 | notificationElement      | string      |   id of your notification element |
 | displayTime | int      | duration notification is shown (s) |
 
-The next step is to configure your ```AppNote```.Currently, all settings listed below are REQUIRED. 
+The next step is to configure your ```AppNotification```.Currently, all settings listed below are REQUIRED. 
 ```javascript
 errorMessageOptions = {
   station: grandCentral, // MUST BE the object of the your desired station
