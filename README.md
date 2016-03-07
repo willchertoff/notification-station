@@ -30,7 +30,7 @@ errorMessageOptions = {
   station: grandCentral, // MUST BE the object of the your desired station
   showAnimation: 'slideInDown', // Entrance class, can be anything you'd like
   hideAnimation: 'slideOutLeft', // Exit class, can be anything you'd like
-  noteClass: 'danger' // Class applied to this notification type
+  notificationClass: 'danger' // Class applied to this notification type
 }
 var errorMessage = new NS.AppNotification(errorMessageOptions); // Create new notification type, errorMessage
 ```
@@ -39,7 +39,7 @@ var errorMessage = new NS.AppNotification(errorMessageOptions); // Create new no
 | station     | object | your station object note is going to |
 | showAnimation      | string      |   class to be applied when notification is triggered |
 | hideAnimation | string      | class to be applied when notification is removed |
-| noteClass | string      | class to be applied throughout the notification process |
+| notificationClass | string      | class to be applied throughout the notification process |
 
 ### Front-End Set-up Example
 
