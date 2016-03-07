@@ -15,7 +15,7 @@ grandCentralSettings = {
   notificationElement: 'message', //id of notification 
   displayTime: 3 // duration notification will be displayed in seconds
 }
-var grandCentral = new NS.Station(settings);
+var grandCentral = new NS.Station(grandCentralSettings);
 ```
 
 | Station Settings        | type           | purpose  |
